@@ -5,15 +5,17 @@ import Header from './components/Header';
 import IncomeExpenses from './components/IncomeExpenses';
 import TransactionList from './components/TransactionList';
 
+import { GlobalProvider } from './ContextAPI/GlobalState';
+
 function App() {
   return (
-    <div>
+    <GlobalProvider>
       <Header />
       <Balance />
       <IncomeExpenses />
       <TransactionList />
       <AddTransaction />
-    </div>
+    </GlobalProvider>
   );
 }
 
