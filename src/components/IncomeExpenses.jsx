@@ -18,14 +18,14 @@ const IncomeExpenses = () => {
       .reduce((acc, crntItem) => (acc += crntItem), 0) * -1;
 
   return (
-    <div>
+    <div className="inc-exp-container">
       <div>
         <h4>Income</h4>
-        <p>+${income}</p>
+        <p className="money plus">+${income}</p>
       </div>
       <div>
         <h4>Expense</h4>
-        <p>-${expense}</p>
+        <p className="money minus">-${expense}</p>
       </div>
     </div>
   );

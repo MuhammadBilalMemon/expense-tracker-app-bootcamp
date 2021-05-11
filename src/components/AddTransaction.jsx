@@ -27,13 +27,16 @@ const AddTransaction = () => {
     };
 
     addTransactionHandler(newTransaction);
+
+    setText("");
+    setAmount(0);
   };
 
   return (
     <>
       <h3>Add new transaction</h3>
       <form onSubmit={onSubmitHandler}>
-        <div>
+        <div className="form-control">
           <label htmlFor="text">Text</label>
           <input
             type="text"
@@ -43,7 +46,7 @@ const AddTransaction = () => {
             placeholder="Enter text..."
           />
         </div>
-        <div>
+        <div className="form-control">
           <label htmlFor="amount">
             Amount <br />
             (negative - expense , positive - income)
@@ -56,7 +59,7 @@ const AddTransaction = () => {
             placeholder="Enter amount..."
           />
         </div>
-        <button>Add Transaction</button>
+        <button className="btn">Add Transaction</button>
       </form>
     </>
   );
